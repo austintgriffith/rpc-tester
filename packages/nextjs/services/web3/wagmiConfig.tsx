@@ -12,6 +12,7 @@ export const enabledChains = targetNetworks.find((network: Chain) => network.id 
   ? targetNetworks
   : ([...targetNetworks, mainnet] as const);
 
+const not_used = 2;
 export const wagmiConfig = createConfig({
   chains: enabledChains,
   connectors: wagmiConnectors,
