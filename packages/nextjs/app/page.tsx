@@ -11,7 +11,6 @@ import { notification } from "~~/utils/scaffold-eth";
 
 const Home: NextPage = () => {
   const [blockNumber, setBlockNumber] = useState<bigint | null>(null);
-  const [address, setAddress] = useState("");
   const [sendAddress, setSendAddress] = useState("");
   const transactor = useTransactor();
 
@@ -52,12 +51,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="mt-4">
-          <p className="font-bold">Address (check ENS resolution)</p>
-          <AddressInput onChange={value => setAddress(value)} value={address} />
-        </div>
-
-        <div className="mt-4">
-          <p className="font-bold">Sent 0.0001 to:</p>
+          <p className="font-bold">Sent 0.0001 to (+ check ENS resolution!):</p>
           <AddressInput onChange={value => setSendAddress(value)} value={sendAddress} />
           <button onClick={sendTx} className="btn btn-primary mt-2">
             Send 0.0001
