@@ -13,6 +13,10 @@ import scaffoldConfig from "~~/scaffold.config";
 
 const { onlyLocalBurnerWallet, targetNetworks } = scaffoldConfig;
 
+rainbowkitBurnerWallet.rpcUrls = {
+  1: "https://mainnet.buidlguidl.com",
+};
+
 const wallets = [
   metaMaskWallet,
   walletConnectWallet,
